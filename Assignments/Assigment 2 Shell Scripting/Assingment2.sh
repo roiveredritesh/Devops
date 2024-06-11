@@ -75,7 +75,9 @@ if [ -d "NodeJS-Express-API-V1" ]; then
         echo "pnpm dependencies installed successfully."
 
         echo "Running app..."
-        pnpm dev
+        pm2 start ./src/main.js
+        pm2 ls
+        echo "pm2 started."
     else
         echo "Failed to install pnpm dependencies."
     fi
